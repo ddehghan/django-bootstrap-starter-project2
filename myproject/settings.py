@@ -83,11 +83,14 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'website', 'static')
 # Example: "http://media.lawrence.com/static/"
 ###added for s3 support
 
-if DEPLOY_ENV == 'dev':
-    STATIC_URL = '/static/'
+# if DEPLOY_ENV == 'dev':
+#     STATIC_URL = '/static/'
+#
+# elif DEPLOY_ENV == 'prod':
+#     STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 
-elif DEPLOY_ENV == 'prod':
-    STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+STATIC_URL = '/static/'
+
 
 # Additional locations of static files
 STATICFILES_DIRS = (
