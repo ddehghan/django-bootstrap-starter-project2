@@ -149,14 +149,14 @@ INSTALLED_APPS = (
     # jinja2
     # 'coffin',
     # end jinja2
-    'widget_tweaks',
+    # 'widget_tweaks',
 
     'website',
 
     # Admin apps
     'django.contrib.admin',
     'social_auth',
-    'storages',
+    # 'storages',
 
     # 'south',  # must be at the end of app list
 )
@@ -235,9 +235,9 @@ SOCIAL_AUTH_UUID_LENGTH = 16
 
 
 # Django storages to store files on S3
-if DEPLOY_ENV == 'prod':
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# if DEPLOY_ENV == 'prod':
+#     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+#     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 #############
 # DATABASES #

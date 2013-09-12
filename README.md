@@ -34,7 +34,7 @@ Setup Steps
 * source myproject/settings_local.env.sh
 * sh myproject/settings_local.heroku.sh
 * git push heroku master
-* heroku run manage.py syncdb
+* heroku run python manage.py syncdb
 
 * Great Success! You are done.
 
