@@ -1,7 +1,8 @@
 {% extends 'theme/base.html' %}
-{% load i18n %}
+{#{% load i18n %}#}
+{% load url from future %}
 
-{% trans "This is the title" as the_title %}
+{#{% trans "This is the title" as the_title %}#}
 
 {% block meta_description %}{{ the_title }}{% endblock %}
 {% block title %}{{ the_title }}{% endblock %}
@@ -14,15 +15,18 @@
 
     Please Login:<br>
 
-    <a href="{% url "socialauth_begin" 'google' %}">
+    <a href="{% url 'social:begin' "google-oauth" %}">
         <img src="{{ STATIC_URL }}images/google-icon.png" alt="Google">
     </a>
-    <a href="{% url "socialauth_begin" 'facebook' %}">
-        <img src="{{ STATIC_URL }}images/facebook-icon.png" alt="Facebook">
+    <a href="{% url 'social:begin' "google-oauth2" %}">
+        <img src="{{ STATIC_URL }}images/google-icon.png" alt="Google">
     </a>
-    <a href="{% url "socialauth_begin" 'yahoo' %}">
-        <img src="{{ STATIC_URL }}images/yahoo-icon.png" alt="Yahoo">
-    </a>
+{#    <a href="{% url 'social:begin' "facebook" %}">#}
+{#        <img src="{{ STATIC_URL }}images/facebook-icon.png" alt="Facebook">#}
+{#    </a>#}
+{#    <a href="{% url 'social:begin' "yahoo-oauth" %}">#}
+{#        <img src="{{ STATIC_URL }}images/yahoo-icon.png" alt="Yahoo">#}
+{#    </a>#}
     <br>
     <br>
 

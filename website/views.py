@@ -16,9 +16,7 @@ def private(request):
 
 
 def login_test(request):
-    return render_to_response('login.html', {
-        'a': 'a',
-    }, context_instance=RequestContext(request))
+    return render_to_response('login.html', {}, RequestContext(request))
 
 
 def index(request):

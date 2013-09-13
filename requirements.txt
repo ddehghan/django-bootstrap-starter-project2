@@ -4,11 +4,13 @@ psycopg2
 werkzeug
 
 dj-database-url
-django-social-auth
+python-social-auth
 boto
-django-storages
+
 django-widget-tweaks
+
 #python-dateutils
+#django-storages
 
 gunicorn # Needed for heroku
 
