@@ -82,4 +82,5 @@ How to get GoogleOauth key
 * Got to https://code.google.com/apis/console
 * Go to API Access tab
 * Create new Client ID for web applications
-* add this urls http://localhost:8000/oauth2callback
+* add this urls http://localhost:8000/complete/google-oauth2/
+* copy Client ID: and Client secret to SOCIAL_AUTH_GOOGLE_OAUTH2_KEY and SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
