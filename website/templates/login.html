@@ -10,16 +10,24 @@
 
 {% block maincontent %}
 
+    <br>
+    <br>
 
     <h1>Login Examples</h1>
+    <br>
+    <br>
 
-    Working Example:<br>
+    <div>Working Example:</div>
 
     <a href="{% url 'social:begin' "google-oauth2" %}">
         <img src="{{ STATIC_URL }}images/google-icon.png" alt="Google">
     </a>
 
-    Other Examples that are not configured.<br>
+    <br>
+    <br>
+    <br>
+
+    <div>Other Examples that are not configured.</div>
 
     <a href="{% url 'social:begin' "facebook" %}">
         <img src="{{ STATIC_URL }}images/facebook-icon.png" alt="Facebook">
