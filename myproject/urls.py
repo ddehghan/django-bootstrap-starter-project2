@@ -8,10 +8,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
-                       url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
+                       url(r'^login-forms', 'website.views.login_test', name='login'),
+                       url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name='logout'),
 
                        url(r'^$', 'website.views.index', name='index'),
-                       url(r'^login-forms', 'website.views.login_test', name='login_test'),
                        url(r'^private', 'website.views.private', name='private'),
 
                        # url("^index", TemplateView.as_view(template_name='index.html'), name="mission"),
