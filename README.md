@@ -25,7 +25,7 @@ What you need to get started?
 ### Advance requirements
 
 * Facebook Oauth keys: FACEBOOK_APP_ID, FACEBOOK_API_SECRET
-* Google OAuth keys: GOOGLE_OAUTH2_CLIENT_ID, GOOGLE_OAUTH2_CLIENT_SECRET
+* Google OAuth keys: SOCIAL_AUTH_GOOGLE_OAUTH2_KEY, SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
 
 
 
