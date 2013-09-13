@@ -1,12 +1,17 @@
 Django Bootstrap Starter Project
-============================
+================================
 This project makes it really easy to create a Django project and publish it to Heroku.
+
+See Demo:  http://django-bootstrap2.herokuapp.com
 
 
 What is included?
 -----------------
+* Django 1.5
 * Heroku settings
-* Social Auth. (Facebook, Google, Yahoo) Oauth
+* Python Social Auth. Oauth for Facebook, Google, Yahoo!
+* Jquery
+* Bootstrap
 
 
 What you need to get started?
@@ -14,8 +19,7 @@ What you need to get started?
 
 ### Mininmum requirements
 
-* Sign up for AWS account
-* Get AWS keys AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+* Heroku account
 
 
 ### Advance requirements
@@ -28,9 +32,9 @@ What you need to get started?
 Setup Steps
 ===========
 
-* git clone
-* heroku create
-* heroku rename <my_cool_project_name>
+* git clone git@github.com:ddehghan/django-bootstrap-starter-project2.git myproject
+* cd myproject
+* heroku create <my_cool_project_name>
 * source myproject/settings_local.env.sh
 * sh myproject/settings_local.heroku.sh
 * git push heroku master
