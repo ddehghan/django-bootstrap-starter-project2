@@ -50,19 +50,17 @@ Helpful Commands
 * Check settings
 
 > heroku config
-
 > printenv
 
 
 ### View logs and status
 > heroku logs
-
 > heroku ps
-
 > heroku config
 
 
-### Heroku 
+### Database
+
 Deployment of Django on Heroku https://devcenter.heroku.com/articles/django
 
 > heroku run python manage.py syncdb
@@ -74,9 +72,9 @@ Deployment of Django on Heroku https://devcenter.heroku.com/articles/django
 
 
 > python manage.py collectstatic --noinput;
-
 > heroku config:add DISABLE_COLLECTSTATIC=1         # To disable static collection
 
+To drop heroku database:
 > heroku pg:reset DATABASE
 
 
