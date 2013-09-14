@@ -25,7 +25,7 @@ What you need to get started?
 ### Advance requirements
 
 * Facebook Oauth keys: FACEBOOK_APP_ID, FACEBOOK_API_SECRET
-* Google OAuth keys: GOOGLE_OAUTH2_CLIENT_ID, GOOGLE_OAUTH2_CLIENT_SECRET
+* Google OAuth keys: SOCIAL_AUTH_GOOGLE_OAUTH2_KEY, SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
 
 
 
@@ -50,19 +50,17 @@ Helpful Commands
 * Check settings
 
 > heroku config
-
 > printenv
 
 
 ### View logs and status
 > heroku logs
-
 > heroku ps
-
 > heroku config
 
 
-### Heroku 
+### Database
+
 Deployment of Django on Heroku https://devcenter.heroku.com/articles/django
 
 > heroku run python manage.py syncdb
@@ -74,9 +72,9 @@ Deployment of Django on Heroku https://devcenter.heroku.com/articles/django
 
 
 > python manage.py collectstatic --noinput;
-
 > heroku config:add DISABLE_COLLECTSTATIC=1         # To disable static collection
 
+To drop heroku database:
 > heroku pg:reset DATABASE
 
 

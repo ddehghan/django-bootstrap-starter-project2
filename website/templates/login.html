@@ -10,23 +10,31 @@
 
 {% block maincontent %}
 
+    <br>
+    <br>
 
-    <h1>Login</h1>
+    <h1>Login Examples</h1>
+    <br>
+    <br>
 
-    Please Login:<br>
+    <div>Working Example:</div>
 
-    <a href="{% url 'social:begin' "google-oauth" %}">
-        <img src="{{ STATIC_URL }}images/google-icon.png" alt="Google">
-    </a>
     <a href="{% url 'social:begin' "google-oauth2" %}">
         <img src="{{ STATIC_URL }}images/google-icon.png" alt="Google">
     </a>
-{#    <a href="{% url 'social:begin' "facebook" %}">#}
-{#        <img src="{{ STATIC_URL }}images/facebook-icon.png" alt="Facebook">#}
-{#    </a>#}
-{#    <a href="{% url 'social:begin' "yahoo-oauth" %}">#}
-{#        <img src="{{ STATIC_URL }}images/yahoo-icon.png" alt="Yahoo">#}
-{#    </a>#}
+
+    <br>
+    <br>
+    <br>
+
+    <div>Other Examples that are not configured.</div>
+
+    <a href="{% url 'social:begin' "facebook" %}">
+        <img src="{{ STATIC_URL }}images/facebook-icon.png" alt="Facebook">
+    </a>
+    <a href="{% url 'social:begin' "yahoo-oauth" %}">
+        <img src="{{ STATIC_URL }}images/yahoo-icon.png" alt="Yahoo">
+    </a>
     <br>
     <br>
 
