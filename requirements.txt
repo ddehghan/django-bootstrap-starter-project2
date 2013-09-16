@@ -1,4 +1,4 @@
-django==1.5.3
+django==1.5.4
 django-toolbelt
 South
 psycopg2
