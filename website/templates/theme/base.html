@@ -42,24 +42,30 @@
 
 {% include "theme/top_nav.html" %}
 
-{% block hero %}
-{% endblock %}
-
 <div class="container">
 
-    {% block maincontent %}
-    {% endblock %}
+    <div class="row">
+        <div class="span12">
+            {% block hero %}
+            {% endblock %}
 
-    <br>
-    <br>
-    <br>
+            {% block maincontent %}
+            {% endblock %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <br>
+            <br>
+            <br>
+            <!-- FOOTER -->
+            <footer>
+                <p class="pull-right"><a href="#">Back to top</a></p>
 
-    <!-- FOOTER -->
-    <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="/">Privacy</a> &middot; <a href="/">Terms</a></p>
-    </footer>
-
+                <p>&copy; 2013 Company, Inc. &middot; <a href="/">Privacy</a> &middot; <a href="/">Terms</a></p>
+            </footer>
+        </div>
+    </div>
 </div>
 <!-- /container -->
 
@@ -68,17 +74,20 @@
 <script src="{{ STATIC_URL }}theme/js/bootstrap.min.js"></script>
 
 <script>
-{#    {% if not request.user.is_staff %}#}
+    {#    {% if not request.user.is_staff %}#}
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-38925689-1']);
+    _gaq.push(['_setAccount', 'UA-xxxxxxx']);
     _gaq.push(['_trackPageview']);
 
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
     })();
-{#    {% endif %}#}
+    {#    {% endif %}#}
 </script>
 
 {% block bottomscript %}
