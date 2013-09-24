@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 from myproject import settings
 
 from django.contrib import admin
@@ -21,8 +23,8 @@ urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
 
                        # Server Static Files from Django
-                       url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
-                           {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+                       # url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
+                       #     {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
 
                        # Social Auth:
                        url('', include('social.apps.django_app.urls', namespace='social')),
@@ -30,3 +32,6 @@ urlpatterns = patterns('',
                        url("^robots\.txt", TemplateView.as_view(template_name='robots.txt', content_type='text/plain'),
                            name="robots"),
 )
+
+# Serving static files from Django is not a good idea. Should use S3+ Django storages
+urlpatterns += staticfiles_urlpatterns()
