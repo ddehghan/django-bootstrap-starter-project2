@@ -20,7 +20,7 @@
     <div>Working Example:</div>
 
     <a href="{% url 'social:begin' "google-oauth2" %}">
-        <img src="{{ STATIC_URL }}images/google-icon.png" alt="Google">
+        <img src="{{ STATIC_URL }}images/login-google.png" alt="Google">
     </a>
 
     <br>
@@ -30,15 +30,15 @@
     <div>Other Examples that are not configured.</div>
 
     <a href="{% url 'social:begin' "facebook" %}">
-        <img src="{{ STATIC_URL }}images/facebook-icon.png" alt="Facebook">
+        <img src="{{ STATIC_URL }}images/login-facebook.png" alt="Facebook">
     </a>
     <a href="{% url 'social:begin' "yahoo-oauth" %}">
-        <img src="{{ STATIC_URL }}images/yahoo-icon.png" alt="Yahoo">
+        <img src="{{ STATIC_URL }}images/login-yahoo.png" alt="Yahoo">
     </a>
     <br>
     <br>
 
-    <a href="/private">private</a>
+    <a href="/private">Private page [login required]</a>
 {% endblock %}
 
 
