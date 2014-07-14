@@ -1,6 +1,5 @@
-django==1.5.4
+django==1.7c1
 django-toolbelt
-South
 psycopg2
 werkzeug
 
