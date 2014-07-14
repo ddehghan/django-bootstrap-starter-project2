@@ -140,7 +140,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.contrib.messages.context_processors.messages',
     'social.apps.django_app.context_processors.backends',
-    # 'social.apps.django_app.context_processors.login_redirect',
+    'social.apps.django_app.context_processors.login_redirect',
     'django.core.context_processors.static'
 )
 
@@ -176,7 +176,6 @@ SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/private'
 LOGIN_ERROR_URL = '/login-error/'
 LOGOUT_URL = '/logout'
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/private'
 # SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
 # SOCIAL_AUTH_LOGIN_URL = '/login-url/'
 SOCIAL_AUTH_LOGIN_URL = '/'
@@ -194,6 +193,9 @@ SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 SOCIAL_AUTH_SLUGIFY_USERNAMES = False
 
 SOCIAL_AUTH_SESSION_EXPIRATION = False
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_USE_DEPRECATED_API = True
+SOCIAL_AUTH_GOOGLE_PLUS_USE_DEPRECATED_API = True
 
 # END - Social Auth Settings
 
